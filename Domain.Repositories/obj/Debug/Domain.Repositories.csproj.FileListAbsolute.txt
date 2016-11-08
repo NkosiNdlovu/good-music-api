@@ -1,0 +1,7 @@
+C:\Dotnet\Assessment\GoodMusic\Domain.Repositories\obj\Debug\Domain.Repositories.csprojResolveAssemblyReference.cache
+C:\Dotnet\Assessment\GoodMusic\Domain.Repositories\bin\Debug\Domain.Repositories.dll
+C:\Dotnet\Assessment\GoodMusic\Domain.Repositories\bin\Debug\Domain.Repositories.pdb
+C:\Dotnet\Assessment\GoodMusic\Domain.Repositories\bin\Debug\Domain.Entities.dll
+C:\Dotnet\Assessment\GoodMusic\Domain.Repositories\bin\Debug\Domain.Entities.pdb
+C:\Dotnet\Assessment\GoodMusic\Domain.Repositories\obj\Debug\Domain.Repositories.dll
+C:\Dotnet\Assessment\GoodMusic\Domain.Repositories\obj\Debug\Domain.Repositories.pdb

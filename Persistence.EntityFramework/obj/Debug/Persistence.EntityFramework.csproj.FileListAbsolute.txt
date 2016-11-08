@@ -1,0 +1,14 @@
+C:\Dotnet\Assessment\GoodMusic\Persistence.EntityFramework\bin\Debug\Persistence.EntityFramework.dll.config
+C:\Dotnet\Assessment\GoodMusic\Persistence.EntityFramework\bin\Debug\Persistence.EntityFramework.dll
+C:\Dotnet\Assessment\GoodMusic\Persistence.EntityFramework\bin\Debug\Persistence.EntityFramework.pdb
+C:\Dotnet\Assessment\GoodMusic\Persistence.EntityFramework\bin\Debug\Domain.Entities.dll
+C:\Dotnet\Assessment\GoodMusic\Persistence.EntityFramework\bin\Debug\EntityFramework.dll
+C:\Dotnet\Assessment\GoodMusic\Persistence.EntityFramework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Dotnet\Assessment\GoodMusic\Persistence.EntityFramework\bin\Debug\Domain.Entities.pdb
+C:\Dotnet\Assessment\GoodMusic\Persistence.EntityFramework\bin\Debug\EntityFramework.xml
+C:\Dotnet\Assessment\GoodMusic\Persistence.EntityFramework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Dotnet\Assessment\GoodMusic\Persistence.EntityFramework\obj\Debug\Persistence.EntityFramework.csprojResolveAssemblyReference.cache
+C:\Dotnet\Assessment\GoodMusic\Persistence.EntityFramework\obj\Debug\Persistence.EntityFramework.dll
+C:\Dotnet\Assessment\GoodMusic\Persistence.EntityFramework\obj\Debug\Persistence.EntityFramework.pdb
+C:\Dotnet\Assessment\GoodMusic\Persistence.EntityFramework\bin\Debug\Domain.Repositories.dll
+C:\Dotnet\Assessment\GoodMusic\Persistence.EntityFramework\bin\Debug\Domain.Repositories.pdb
