@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alias.cs" />
     <Compile Include="Artist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Domain.Entities
 {
@@ -6,7 +7,7 @@ namespace Domain.Entities
     {
         public Guid Artist_Id { get; set; }
         public string Name { get; set; }
-        public string Aliases { get; set; }
+        public virtual ICollection<Alias> Aliases { get; set; }
         public string Country { get; set; }
     }
 }
