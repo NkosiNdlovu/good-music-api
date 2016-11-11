@@ -1,6 +1,13 @@
+
+--Create Database
+
+CREATE DATABASE [GoodMusic] 
+
+-- Create Tables and Data
+
 USE [GoodMusic]
 GO
-/****** Object:  Table [dbo].[Artists]    Script Date: 11/08/2016 18:23:35 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -8,26 +15,74 @@ GO
 SET ANSI_PADDING ON
 GO
 CREATE TABLE [dbo].[Artists](
+	[Artist_Id] [uniqueidentifier] NOT NULL,
 	[Name] [varchar](50) NULL,
-	[Artist_Id] [uniqueidentifier] NULL,
-	[Aliases] [varchar](255) NULL,
-	[Country] [varchar](30) NULL
+	[Country] [varchar](30) NULL,
+ CONSTRAINT [PK_Table_1] PRIMARY KEY CLUSTERED 
+(
+	[Artist_Id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
 SET ANSI_PADDING OFF
 GO
-INSERT [dbo].[Artists] ([Name], [Artist_Id], [Aliases], [Country]) VALUES (N'Metallica', N'65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab', N'Metalica,????', N'US')
-INSERT [dbo].[Artists] ([Name], [Artist_Id], [Aliases], [Country]) VALUES (N'Lady Gaga', N'650e7db6-b795-4eb5-a702-5ea2fc46c848', N'Lady Ga Ga,Stefani Joanne Angelina Germanotta', N'US')
-INSERT [dbo].[Artists] ([Name], [Artist_Id], [Aliases], [Country]) VALUES (N'Mumford & Sons', N'c44e9c22-ef82-4a77-9bcd-af6c958446d6', NULL, N'GB')
-INSERT [dbo].[Artists] ([Name], [Artist_Id], [Aliases], [Country]) VALUES (N'Mott the Hoople', N'435f1441-0f43-479d-92db-a506449a686b', N'Mott The Hoppie,Mott The Hopple', N'GB')
-INSERT [dbo].[Artists] ([Name], [Artist_Id], [Aliases], [Country]) VALUES (N'Megadeth', N'a9044915-8be3-4c7e-b11f-9e2d2ea0a91e', N'Megadeath', N'US')
-INSERT [dbo].[Artists] ([Name], [Artist_Id], [Aliases], [Country]) VALUES (N'John Coltrane', N'b625448e-bf4a-41c3-a421-72ad46cdb831', N'John Coltraine,John William Coltrane', N'US')
-INSERT [dbo].[Artists] ([Name], [Artist_Id], [Aliases], [Country]) VALUES (N'Mogwai', N'd700b3f5-45af-4d02-95ed-57d301bda93e', N'Mogwa', N'GB')
-INSERT [dbo].[Artists] ([Name], [Artist_Id], [Aliases], [Country]) VALUES (N'John Mayer', N'144ef525-85e9-40c3-8335-02c32d0861f3', NULL, N'US')
-INSERT [dbo].[Artists] ([Name], [Artist_Id], [Aliases], [Country]) VALUES (N'Johnny Cash', N'18fa2fd5-3ef2-4496-ba9f-6dae655b2a4f', N'Johhny Cash,Jonny Cash', N'US')
-INSERT [dbo].[Artists] ([Name], [Artist_Id], [Aliases], [Country]) VALUES (N'Jack Johnson', N'6456a893-c1e9-4e3d-86f7-0008b0a3ac8a', N'Jack Hody Johnson', N'US')
-INSERT [dbo].[Artists] ([Name], [Artist_Id], [Aliases], [Country]) VALUES (N'John Frusciante', N'f1571db1-c672-4a54-a2cf-aaa329f26f0b', N'John Anthony Frusciante', N'US')
-INSERT [dbo].[Artists] ([Name], [Artist_Id], [Aliases], [Country]) VALUES (N'Elton John', N'b83bc61f-8451-4a5d-8b8e-7e9ed295e822', N'E. John, Elthon John,Elton Jphn,John Elton, Reginald Kenneth Dwight', N'GB')
-INSERT [dbo].[Artists] ([Name], [Artist_Id], [Aliases], [Country]) VALUES (N'Rancid', N'24f8d8a5-269b-475c-a1cb-792990b0b2ee', N'????', N'US')
-INSERT [dbo].[Artists] ([Name], [Artist_Id], [Aliases], [Country]) VALUES (N'Transplants', N'29f3e1bf-aec1-4d0a-9ef3-0cb95e8a3699', N'The Transplants', N'US')
-INSERT [dbo].[Artists] ([Name], [Artist_Id], [Aliases], [Country]) VALUES (N'Operation Ivy', N'931e1d1f-6b2f-4ff8-9f70-aa537210cd46', N'Op Ivy', N'US')
+INSERT [dbo].[Artists] ([Artist_Id], [Name], [Country]) VALUES (N'6456a893-c1e9-4e3d-86f7-0008b0a3ac8a', N'Jack Johnson', N'US')
+INSERT [dbo].[Artists] ([Artist_Id], [Name], [Country]) VALUES (N'144ef525-85e9-40c3-8335-02c32d0861f3', N'John Mayer', N'US')
+INSERT [dbo].[Artists] ([Artist_Id], [Name], [Country]) VALUES (N'29f3e1bf-aec1-4d0a-9ef3-0cb95e8a3699', N'Transplants', N'US')
+INSERT [dbo].[Artists] ([Artist_Id], [Name], [Country]) VALUES (N'd700b3f5-45af-4d02-95ed-57d301bda93e', N'Mogwai', N'GB')
+INSERT [dbo].[Artists] ([Artist_Id], [Name], [Country]) VALUES (N'650e7db6-b795-4eb5-a702-5ea2fc46c848', N'Lady Gaga', N'US')
+INSERT [dbo].[Artists] ([Artist_Id], [Name], [Country]) VALUES (N'18fa2fd5-3ef2-4496-ba9f-6dae655b2a4f', N'Johnny Cash', N'US')
+INSERT [dbo].[Artists] ([Artist_Id], [Name], [Country]) VALUES (N'b625448e-bf4a-41c3-a421-72ad46cdb831', N'John Coltrane', N'US')
+INSERT [dbo].[Artists] ([Artist_Id], [Name], [Country]) VALUES (N'24f8d8a5-269b-475c-a1cb-792990b0b2ee', N'Rancid', N'US')
+INSERT [dbo].[Artists] ([Artist_Id], [Name], [Country]) VALUES (N'b83bc61f-8451-4a5d-8b8e-7e9ed295e822', N'Elton John', N'GB')
+INSERT [dbo].[Artists] ([Artist_Id], [Name], [Country]) VALUES (N'65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab', N'Metallica', N'US')
+INSERT [dbo].[Artists] ([Artist_Id], [Name], [Country]) VALUES (N'a9044915-8be3-4c7e-b11f-9e2d2ea0a91e', N'Megadeth', N'US')
+INSERT [dbo].[Artists] ([Artist_Id], [Name], [Country]) VALUES (N'435f1441-0f43-479d-92db-a506449a686b', N'Mott the Hoople', N'GB')
+INSERT [dbo].[Artists] ([Artist_Id], [Name], [Country]) VALUES (N'931e1d1f-6b2f-4ff8-9f70-aa537210cd46', N'Operation Ivy', N'US')
+INSERT [dbo].[Artists] ([Artist_Id], [Name], [Country]) VALUES (N'f1571db1-c672-4a54-a2cf-aaa329f26f0b', N'John Frusciante', N'US')
+INSERT [dbo].[Artists] ([Artist_Id], [Name], [Country]) VALUES (N'c44e9c22-ef82-4a77-9bcd-af6c958446d6', N'Mumford & Sons', N'GB')
+/****** Object:  Table [dbo].[Aliases]    Script Date: 11/11/2016 08:38:30 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Aliases](
+	[Alias_Id] [uniqueidentifier] NOT NULL,
+	[Artist_Id] [uniqueidentifier] NULL,
+	[Name] [varchar](50) NULL,
+ CONSTRAINT [PK_Table_2] PRIMARY KEY CLUSTERED 
+(
+	[Alias_Id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'5bfb9186-e7e3-4670-9512-01a541095bb2', N'435f1441-0f43-479d-92db-a506449a686b', N'Mott The Hoppie')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'8986ce94-fe80-4e62-917d-12633f83bc60', N'650e7db6-b795-4eb5-a702-5ea2fc46c848', N'Stefani Joanne Angelina Germanotta')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'c78cae13-7936-43a7-90c1-164f8cc5bd13', N'65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab', N'????')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'588fcf52-41bf-4569-90f0-1d25c008d15b', N'18fa2fd5-3ef2-4496-ba9f-6dae655b2a4f', N'Jonny Cash')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'e789d752-0ef2-46bd-a961-20fae0223ff3', N'd700b3f5-45af-4d02-95ed-57d301bda93e', N'Mogwa')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'b198af35-d62e-4441-956c-3684087a1eaf', N'b83bc61f-8451-4a5d-8b8e-7e9ed295e822', N'E. John')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'85a83c52-6619-4da7-8a80-377b1e3483a4', N'b83bc61f-8451-4a5d-8b8e-7e9ed295e822', N'John Elton')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'cced920c-a14d-40ac-b41c-38b2d5f0219c', N'a9044915-8be3-4c7e-b11f-9e2d2ea0a91e', N'Megadeath')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'961a8896-dfde-4b3c-a5d8-3ee1280b22cb', N'b625448e-bf4a-41c3-a421-72ad46cdb831', N'John Coltraine')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'aaa66f99-b86f-499e-a886-63099f711d3e', N'18fa2fd5-3ef2-4496-ba9f-6dae655b2a4f', N'Johhny Cash')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'2342d013-eb0e-41bd-b413-63a7b6f104e5', N'b83bc61f-8451-4a5d-8b8e-7e9ed295e822', N'Reginald Kenneth Dwight')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'fba0d83c-6d61-4f96-ac54-7d81bb0a77e7', N'6456a893-c1e9-4e3d-86f7-0008b0a3ac8a', N'Jack Hody Johnson')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'4b5df74e-7c3b-4ef5-8cf7-9e1c3d10ffb9', N'b625448e-bf4a-41c3-a421-72ad46cdb831', N'John William Coltrane')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'39537058-2a35-44cc-9f30-9f64564ed20c', N'931e1d1f-6b2f-4ff8-9f70-aa537210cd46', N'Op Ivy')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'46964dc7-3112-4487-9ced-a8653d915fdd', N'b83bc61f-8451-4a5d-8b8e-7e9ed295e822', N'Elton Jphn')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'53ba7cb1-01e0-4b03-a47b-aa5055733a4a', N'650e7db6-b795-4eb5-a702-5ea2fc46c848', N'Lady Ga Ga')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'1a2460f0-fab4-4ca9-be6c-b987d3672d71', N'65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab', N'Metalica')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'f5a05412-b08d-4d69-9702-c45bd2f870e9', N'24f8d8a5-269b-475c-a1cb-792990b0b2ee', N'????')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'8226279d-530b-4b14-8117-caba88f53d4f', N'29f3e1bf-aec1-4d0a-9ef3-0cb95e8a3699', N'The Transplants')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'bb7d83cc-302d-49e6-aa32-eec08d852b9a', N'f1571db1-c672-4a54-a2cf-aaa329f26f0b', N'John Anthony Frusciante')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'81d80066-46a9-43ca-93b7-f6228bcb7540', N'b83bc61f-8451-4a5d-8b8e-7e9ed295e822', N'Elthon John')
+INSERT [dbo].[Aliases] ([Alias_Id], [Artist_Id], [Name]) VALUES (N'd2a76cc6-02a6-460b-8a8b-ffc6f9a1cb6c', N'435f1441-0f43-479d-92db-a506449a686b', N'Mott The Hopple')
+/****** Object:  ForeignKey [FK__Aliases__Artist___03317E3D]    Script Date: 11/11/2016 08:38:30 ******/
+ALTER TABLE [dbo].[Aliases]  WITH CHECK ADD FOREIGN KEY([Artist_Id])
+REFERENCES [dbo].[Artists] ([Artist_Id])
+GO
