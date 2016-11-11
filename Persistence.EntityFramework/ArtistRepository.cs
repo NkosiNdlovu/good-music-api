@@ -21,12 +21,26 @@ namespace Persistence.EntityFramework
 
         public IEnumerable<Artist> FindArtistsThatStartWith(string searchCriteria)
         {
-            return Context.Artists.Where(a => a.Name.StartsWith(searchCriteria) || a.Aliases.Contains(","+ searchCriteria));
+           
+            return (from artists in Context.Artists
+                      join alias in Context.Aliases on artists equals alias.Artist into X
+                      from Y in X.DefaultIfEmpty()
+                          where Y.Name.StartsWith(searchCriteria) || artists.Name.StartsWith(searchCriteria)
+                      select artists).Distinct().ToList();
+            
         }
 
         public IEnumerable<Artist> GetPagedArtistsThatStartWith(string searchCriteria, int page, int pageSize)
         {
-            return Context.Artists.OrderBy(a => a.Name).Skip(pageSize * (page - 1)).Take(pageSize).Where(a => a.Name.StartsWith(searchCriteria) || a.Aliases.Contains("," + searchCriteria));
+            return (from artists in Context.Artists
+                    join alias in Context.Aliases on artists equals alias.Artist into X
+                    from Y in X.DefaultIfEmpty()
+                    where Y.Name.StartsWith(searchCriteria) || artists.Name.StartsWith(searchCriteria)
+                    select artists)
+                        .Distinct()
+                        .OrderBy(a => a.Name)
+                        .Skip(pageSize * (page - 1)).Take(pageSize)
+                        .ToList();
         }
     }
 }

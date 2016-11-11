@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodMusic", "GoodMusic\GoodMusic.csproj", "{1DE01957-CDA4-4F48-97D0-8357398AC1C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodMusic.Tests", "GoodMusic.Tests\GoodMusic.Tests.csproj", "{9CFF1024-E987-4610-8E6B-3F9A0774C4B4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence.EntityFramework", "Persistence.EntityFramework\Persistence.EntityFramework.csproj", "{0244A036-3FB7-4E79-9A42-5FB8C698C1B3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{ABF34CAD-E74F-4E34-9857-A701AA811F24} = {ABF34CAD-E74F-4E34-9857-A701AA811F24}
@@ -29,10 +27,6 @@ Global
 		{1DE01957-CDA4-4F48-97D0-8357398AC1C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DE01957-CDA4-4F48-97D0-8357398AC1C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DE01957-CDA4-4F48-97D0-8357398AC1C0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9CFF1024-E987-4610-8E6B-3F9A0774C4B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9CFF1024-E987-4610-8E6B-3F9A0774C4B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9CFF1024-E987-4610-8E6B-3F9A0774C4B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9CFF1024-E987-4610-8E6B-3F9A0774C4B4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0244A036-3FB7-4E79-9A42-5FB8C698C1B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0244A036-3FB7-4E79-9A42-5FB8C698C1B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0244A036-3FB7-4E79-9A42-5FB8C698C1B3}.Release|Any CPU.ActiveCfg = Release|Any CPU

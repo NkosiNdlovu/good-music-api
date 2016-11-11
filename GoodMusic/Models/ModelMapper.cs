@@ -28,7 +28,7 @@ namespace GoodMusic.Models
                 ArtistApiModel ArtistVM = new ArtistApiModel();
                 ArtistVM.Artist_Id = artist.Artist_Id.ToString();
                 if (artist.Aliases != null)
-                    ArtistVM.Aliases = artist.Aliases.Split(',').ToList();
+                    ArtistVM.Aliases = artist.Aliases.Select(a => a.Name).ToList();
                 ArtistVM.Country = artist.Country;
                 ArtistVM.Name = artist.Name;
                 artistSearchViewModel.results.Add(ArtistVM);
