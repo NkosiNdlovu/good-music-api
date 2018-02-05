@@ -1,4 +1,4 @@
-# GoodMusicAPI
+# Good Music API
 
 ## Tools used
 
